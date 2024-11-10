@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Pokemon_Fight" default="jar" basedir=".">
+    <!-- Define the directories -->
+    <property name="src.dir" value="src"/>
+    <property name="resources.dir" value="resources"/>
+    <property name="bin.dir" value="bin"/>
+    <property name="jar.dir" value="dist"/>
+    <property name="jar.name" value="Pokemon_Fight.jar"/>
+    <!-- Create bin directory -->
+    <target name="prepare">
+        <mkdir dir="${bin.dir}" />
+    </target>
+    <!-- Compile the Java files -->
+    <target name="compile" depends="prepare">
+        <javac srcdir="${src.dir}" destdir="${bin.dir}">
+            <classpath>
+                <fileset dir="libraries">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+    <!-- Copy resources (WAV files) to bin directory -->
+    <target name="copy-resources" depends="compile">
+        <copy todir="${bin.dir}">
+            <fileset dir="${resources.dir}">
+                <include name="*"/>
+            </fileset>
+        </copy>
+    </target>
+    <!-- Create the JAR file -->
+    <target name="jar" depends="copy-resources">
+        <jar destfile="${jar.dir}/${jar.name}" basedir="${bin.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="org/codeforall/simplegfxdemo/Main"/>
+            </manifest>
+            <zipgroupfileset dir="libraries" />
+        </jar>
+    </target>
+</project>
