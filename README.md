@@ -8,9 +8,7 @@ Welcome to **Pokemon Fight**! A simple, fast-paced, two-player Pokémon battle g
 - [Game Controls](#game-controls)
 - [How to Play](#how-to-play)
 - [Features](#features)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [License](#license)
+- [Pictures](#pictures)
 
 ## About the Game
 
@@ -43,3 +41,11 @@ Here are the control keys for each player:
 3. **Launch Attacks**: Press the attack key (`SPACE` or `ENTER`) to fire at the opponent.
 4. **Deplete Opponent’s Lives**: Each player starts with **4 lives**. Every successful hit on the opponent reduces one life.
 5. **Victory**: The game ends when one player’s lives reach zero. The remaining player is declared the winner!
+
+## 🖼️ Pictures
+
+![IntroGame](https://github.com/user-attachments/assets/b0a1f54d-5b0e-439f-9831-5dac7f3939e2)
+
+![InGame](https://github.com/user-attachments/assets/3f886961-e7ce-4738-9987-e12e4cf48410)
+
+
